@@ -20,7 +20,7 @@ function Square (props) {
     index[1] === currentChessIndex[1]) {
     chessWidth = squareWidth
     chessFontSize = squareWidth * 0.6
-    chessBoxShadow = '0 2px 2px 0px rgba(0, 0, 0, 0.3)'
+    chessBoxShadow = '0 1px 1px 0px rgba(0, 0, 0, 0.3)'
   }
   
   let isAbleReceive = false

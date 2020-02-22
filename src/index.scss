@@ -14,14 +14,16 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 
   .game-name {
+    margin-bottom: 25px;
     h4 {
       font-family: 'FZLS';
       font-size: 30px;
       font-weight: normal;
       color: #8e5212;
-      margin: 45px 0 0 0;
+      margin: 30px 0 0 0;
     }
   }
 
@@ -30,7 +32,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 42px;
+    right: 20px;
 
     span {
       font-size: 16px;
