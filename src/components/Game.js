@@ -8,6 +8,7 @@ function Game (props) {
     history, handleClickChess, currentChessIndex, ableReceiveIndices,
     winnerSide, handleMoveChess, replay, goBack,
   } = props
+  
   let currentLayout = history[history.length - 1].layout
   let scale = 0.9
   let squareWidth = document.body.clientWidth * scale / 9
@@ -68,10 +69,10 @@ function Game (props) {
       
       {/*按钮：返回上一步、重玩*/}
       <div className="btn-area">
-        <button onClick={goBack}>
+        <button onClick={goBack} disabled={history.length === 1}>
           返回上一步
         </button>
-        <button onClick={replay}>
+        <button onClick={replay} disabled={history.length === 1}>
           重玩
         </button>
       </div>

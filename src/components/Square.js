@@ -35,7 +35,7 @@ function Square (props) {
            width: squareWidth + 'px',
            height: squareWidth + 'px',
          }}
-         onClick={() => handleMoveChess(isAbleReceive, index, history, currentChessIndex)}
+         onClick={() => handleMoveChess && handleMoveChess(isAbleReceive, index, history, currentChessIndex)}
     >
       {
         data &&
@@ -49,7 +49,7 @@ function Square (props) {
                   backgroundSize: `${chessWidth}px  ${chessWidth}px`,
                   boxShadow: chessBoxShadow
                 }}
-                onClick={() => handleClickChess(index, layout, data, history, winnerSide)}
+                onClick={() => handleClickChess && handleClickChess(index, layout, data, history, winnerSide)}
         >
           {data.name}
         </button>
