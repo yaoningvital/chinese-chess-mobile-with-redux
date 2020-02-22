@@ -21,25 +21,20 @@ body {
       font-size: 30px;
       font-weight: normal;
       color: #8e5212;
-      margin: 50px 0 10px 0;
+      margin: 45px 0 0 0;
     }
   }
 
-  .status {
-
-  }
-
-  .board {
-    background-image: url("./assets/images/chess-board-bg.png");
-    background-size: cover;
+  .status, .winner {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    box-shadow: 2px 5px 5px #888;
-    //border: 4px solid #9d6b48;
-    border-radius: 4px;
+    margin-bottom: 10px;
+
+    span {
+      font-size: 16px;
+    }
 
     .square {
       display: flex;
@@ -64,7 +59,73 @@ body {
     }
   }
 
-  .btn-area {
+  .board {
+    background-image: url("./assets/images/chess-board-bg.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 2px 5px 5px #888;
+    //border: 4px solid #9d6b48;
+    border-radius: 4px;
 
+    .square {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      button.chess {
+        border-style: none;
+        outline: none;
+        padding: 0;
+        font-family: 'FZLS';
+        background-color: transparent;
+        background-image: url("./assets/images/chess-bg.png");
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .green-dot {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: rgba(0, 255, 0, 0.6);
+        top: 50%;
+        left: 50%;
+        margin-top: -4px;
+        margin-left: -4px;
+      }
+    }
+  }
+
+  .btn-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+
+    button {
+      border-style: none;
+      outline: none;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      background-image: linear-gradient(#c8a470, #8c542f);
+      border-radius: 10px;
+      font-family: "Microsoft YaHei UI";
+      padding: 10px 20px;
+    }
   }
 }
